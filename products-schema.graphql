@@ -146,17 +146,10 @@ product: Product!
 user: User! 
 }
 
+
 """
 A Subscription for whenever a new review has been added.
 """
-
-type Review @key(fields: "id") { id: Int!
-body: String!
-product: Product!
-user: User! 
+type Subscription {
+  reviewAdded: Review
 }
-
-
-#type Subscription {
-#ADD SUBSCRIPTION FIELDS AND RETURN TYPES HERE
-#}
